@@ -19,7 +19,7 @@ def GenRand(seconds):
 threads = []
 
 for _ in range(quantity):
-    t = threading.Thread(target=GenRand, args=[2])
+    t = threading.Thread(target=GenRand, args=[1])
     t.start()
     threads.append(t)
 

@@ -20,7 +20,12 @@ def DiceValues():
         try:
             quantity = int(input('enter the number of dice to roll: '))
             diceType = int(input('enter the type of dice you want to roll: '))
-            go=False
+            if quantity==0 or diceType==0:
+                    raise ZeroValueError
+            elif quantity<0 or diceType<0:
+                    raise NegativeValueError
+            else:
+                go=False
         except ValueError:
             print('\nNot an integer, Please enter an integer\n')
         except ZeroValueError:
